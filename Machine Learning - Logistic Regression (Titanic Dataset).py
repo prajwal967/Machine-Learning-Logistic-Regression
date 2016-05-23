@@ -15,7 +15,7 @@ from sklearn.preprocessing import Imputer, PolynomialFeatures
 #Preprocessor
 le_sex = preprocessing.LabelEncoder()
 #Training Data
-training=pd.read_csv('/home/prajwal/Desktop/Machine Learning-Logistic Regression (Titanic Dataset)/train.csv')
+training=pd.read_csv('/home/prajwal/Desktop/Machine-Learning-Titanic-Dataset/train.csv')
 training_label=training[[1]]
 training.drop(['Name', 'PassengerId', 'Ticket', 'Cabin','Survived'], axis=1, inplace=True)
 training.Sex = le_sex.fit_transform(training.Sex)
@@ -34,8 +34,8 @@ training = imp.transform(training)
 # In[5]:
 
 #Test Data
-test=pd.read_csv('/home/prajwal/Desktop/Machine Learning-Logistic Regression (Titanic Dataset)/test.csv')
-test_label=pd.read_csv('/home/prajwal/Desktop/Machine Learning-Logistic Regression (Titanic Dataset)/genderclassmodel.csv')
+test=pd.read_csv('/home/prajwal/Desktop/Machine-Learning-Titanic-Dataset/test.csv')
+test_label=pd.read_csv('/home/prajwal/Desktop/Machine-Learning-Titanic-Dataset/genderclassmodel.csv')
 test_label=test_label['Survived']
 test.drop(['Name', 'PassengerId', 'Ticket', 'Cabin'], axis=1, inplace=True)
 #test.Name=le_sex.fit_transform(test.Name)
