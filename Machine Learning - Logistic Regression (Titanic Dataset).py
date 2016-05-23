@@ -44,8 +44,6 @@ test['Embarked'][(test['Embarked'] == 'S')] = 0
 test['Embarked'][(test['Embarked'] == 'C')] = 1
 test['Embarked'][(test['Embarked'] == 'Q')] = 2
 test['Embarked'][(test['Embarked'].isnull())] = 3
-imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
-imp.fit(test)
 test = imp.transform(test)
 #test=preprocessing.normalize(test, norm='l2')
 #poly = PolynomialFeatures(1)
