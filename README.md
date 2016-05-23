@@ -1,1 +1,1 @@
-# Machine-Learning-Logistic-Regression-
+# Machine-Learning-Titanic Dataset
